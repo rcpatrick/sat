@@ -70,6 +70,10 @@ sat is a tool that searches for imagery of a slice of the Western hemisphere as 
 
 :	Requires `dmenu(1).` Allows interactive fuzzy-search input rather than manually typing sites and imagery codes.
 
+`-u,--url`
+
+:	Just print the URL of the image to stdout rather than opening it with mpv.
+
 ## BUGS
 
 Report any bugs to ray@raypatrick.xyz.
