@@ -21,7 +21,7 @@ sat - Retrieves near-real-time NOAA GOES weather satellite imagery.
 
 ## SYNOPSIS
 
-`sat SITE IMAGERY_PRODUCT [-i]` 
+`sat SITE IMAGERY_PRODUCT [-i] [-u]`
 
 
 ## DESCRIPTION
