@@ -32,39 +32,41 @@ sat is a tool that searches for imagery of a slice of the Western hemisphere as 
 
 `SITE`
 
-:	GOES satellites really image an entire hemisphere at once, but weather information customers are usually interested in smaller regions. The full-disk GOES image is divided into slices centered on certain geographical regions or features. SITE is the geographical region or feature that the view is centered on. May be one of the following:
-:		abq	Albuquerque, NM
-:		ak	Alaska
-:		alb	Albany, NY
-:		aus	Austin, TX
-:		bwi	Baltimore, MD
-:		carib	Caribbean
-:		clt	Charlotte, NC
-:		cod	Yellowstone
-:		den	Denver, CO
-:		dtw	Detroit, MI
-:		evv	Evansville, ID
-:		gulf	Gulf of Mexico
-:		hi	Hawaii
-:		ict	Wichita, KS
-:		las	Las Vegas, NV
-:		lit	Little Rock, AR
-:		lws	Leniston, ID
-:		mgm	Montgomery, AL
-:		msp	Minneapolis, MN
-:		pir	Pierre, SD
-:		tpa	Tampa, FL
-:		wmc	Winnemacca, NV
-:		us	Contiguous United States
+GOES satellites really image an entire hemisphere at once, but weather information customers are usually interested in smaller regions. The full-disk GOES image is divided into slices centered on certain geographical regions or features. SITE is the geographical region or feature that the view is centered on. May be one of the following:
+
+* abq	Albuquerque, NM
+* ak	Alaska
+* alb	Albany, NY
+* aus	Austin, TX
+* bwi	Baltimore, MD
+* carib	Caribbean
+* clt	Charlotte, NC
+* cod	Yellowstone
+* den	Denver, CO
+* dtw	Detroit, MI
+* evv	Evansville, ID
+* gulf	Gulf of Mexico
+* hi	Hawaii
+* ict	Wichita, KS
+* las	Las Vegas, NV
+* lit	Little Rock, AR
+* lws	Leniston, ID
+* mgm	Montgomery, AL
+* msp	Minneapolis, MN
+* pir	Pierre, SD
+* tpa	Tampa, FL
+* wmc	Winnemacca, NV
+* us	Contiguous United States
 
 `IMAGERY_PRODUCT`
 
-:	GOES satellites have instruments that collect across several spectral bands in both visible light and infrared. IMAGERY_PRODUCT specifies which spectral band you want to see imagery from. May be one of the following:
-:		irbw	Infrared (black & white)
-:		ircol	Infrared (color)
-:		irnws	Composite of infrared and water vapor
-:		vis	Visible light (site must be in daylight)
-:		wv	Water vapor
+GOES satellites have instruments that collect across several spectral bands in both visible light and infrared. IMAGERY_PRODUCT specifies which spectral band you want to see imagery from. May be one of the following:
+
+* irbw	Infrared (black & white)
+* ircol	Infrared (color)
+* irnws	Composite of infrared and water vapor
+* vis	Visible light (site must be in daylight)
+* wv	Water vapor
 
 `-i,--interactive`
 
