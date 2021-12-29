@@ -1,5 +1,20 @@
 # sat 
 
+## Install and Use
+From Github:
+```
+git clone https://github.com/rcpatrick/sat.git
+```
+From my website:
+```
+git clone git://git.raypatrick.xyz/sat.git
+```
+Then:
+```
+cd sat
+sudo make install
+```
+
 ## NAME
 
 sat - Retrieves near-real-time NOAA GOES weather satellite imagery. 
