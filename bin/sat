@@ -91,9 +91,18 @@ interactive() {
 	main $site $product
 }
 
-main() {
-	viewurl $baseurl/sat_$2_$1.jpg
+constructurl() {
+	echo "$baseurl/sat_$2_$1.jpg"
 }
+
+main() {
+	case "$last" in
+		-u|--url) constructurl $1 $2 ;;
+		*) viewurl $(constructurl $1 $2) ;;
+	esac
+}
+
+for last; do true; done
 
 case "$#" in
 	0) help ;;
