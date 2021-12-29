@@ -1,0 +1,106 @@
+#!/bin/sh
+baseurl="https://aviationweather.gov/data/obs/sat/us"
+
+viewurl() {
+	mpv --no-osc --loop-file=inf $1 > /dev/null 2>&1 & exit
+}
+
+emitsites() {
+cat << EOF
+abq:Albuquerque, NM
+ak:Alaska
+alb:Albany, NY
+aus:Austin, TX
+bwi:Baltimore, MD
+carib:Caribbean
+clt:Charlotte, NC
+cod:Yellowstone
+den:Denver, CO
+dtw:Detroit, MI
+evv:Evansville, ID
+gulf:Gulf of Mexico
+hi:Hawaii
+ict:Wichita, KS
+las:Las Vegas, NV
+lit:Little Rock, AR
+lws:Leniston, ID
+mgm:Montgomery, AL
+msp:Minneapolis, MN
+pir:Pierre, SD
+tpa:Tampa, FL
+wmc:Winnemacca, NV
+us:Contiguous United States
+EOF
+}
+
+emitproducts() {
+cat << EOF
+irbw:Infrared (black & white)
+ircol:Infrared (color)
+irnws:Infrared (NWS overlay)
+vis:Visible light
+wv:Water vapor
+EOF
+}
+
+help() {
+cat << EOF
+sat.sh: view near-real-time NOAA GOES satellite imagery.
+
+SYNOPSIS:
+	$ sat [site] [imagery product]
+
+OPTIONS:
+	[site]
+		abq	Albuquerque, NM
+		ak	Alaska
+		alb	Albany, NY
+		aus	Austin, TX
+		bwi	Baltimore, MD
+		carib	Caribbean
+		clt	Charlotte, NC
+		cod	Yellowstone
+		den	Denver, CO
+		dtw	Detroit, MI
+		evv	Evansville, ID
+		gulf	Gulf of Mexico
+		hi	Hawaii
+		ict	Wichita, KS
+		las	Las Vegas, NV
+		lit	Little Rock, AR
+		lws	Leniston, ID
+		mgm	Montgomery, AL
+		msp	Minneapolis, MN
+		pir	Pierre, SD
+		tpa	Tampa, FL
+		wmc	Winnemacca, NV
+		us	Contiguous United States
+
+	[imagery product]
+		irbw	Infrared (black & white)
+		ircol	Infrared (color)
+		irnws	Infrared (NWS overlay)
+		vis	Visible light
+		wv	Water vapor
+EOF
+}
+
+interactive() {
+	site=$(emitsites | dmenu | cut -f1 -d":")
+	product=$(emitproducts | dmenu | cut -f1 -d":")
+	main $site $product
+}
+
+main() {
+	viewurl $baseurl/sat_$2_$1.jpg
+}
+
+case "$#" in
+	0) help ;;
+esac
+
+case "$1" in
+	help) help ;;
+	-i|--interactive) interactive ;;
+	*) main $1 $2 ;;
+esac

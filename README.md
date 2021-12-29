@@ -1,23 +1,19 @@
 # sat 
 
-NAME
-====
+## NAME
 
 sat - Retrieves near-real-time NOAA GOES weather satellite imagery. 
 
-SYNOPSIS
-========
+## SYNOPSIS
 
 `sat SITE IMAGERY_PRODUCT [-i]` 
 
 
-DESCRIPTION
-===========
+## DESCRIPTION
 
 sat is a tool that searches for imagery of a slice of the Western hemisphere as viewed by the GOES-East and GOES-West satellites, then retrieves one of 5 different imagery products: black & white infrared, color infrared, visible light, water vapor, or a composite of water vapor and black & white infrared.
 
-OPTIONS
-=======
+## OPTIONS
 
 `SITE`
 
@@ -59,17 +55,14 @@ OPTIONS
 
 :	Requires `dmenu(1).` Allows interactive fuzzy-search input rather than manually typing sites and imagery codes.
 
-BUGS
-====
+## BUGS
 
 Report any bugs to ray@raypatrick.xyz.
 
-AUTHOR
-======
+## AUTHOR
 
 Written 2021 by Ray Patrick.
 
-SEE ALSO
-========
+## SEE ALSO
 
 `dmenu(1)`
