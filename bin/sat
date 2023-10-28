@@ -1,5 +1,6 @@
 #!/bin/sh
-baseurl="https://aviationweather.gov/data/obs/sat/us"
+#baseurl="https://aviationweather.gov/data/obs/sat/us"
+baseurl="https://aviationweather-bldr.ncep.noaa.gov/data/obs/sat/us/"
 
 viewurl() {
 	mpv --no-osc --loop-file=inf $1 > /dev/null 2>&1 & exit
